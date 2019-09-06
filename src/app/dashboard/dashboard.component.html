@@ -1,0 +1,35 @@
+<div class="container-fluid">
+
+  <mat-grid-list cols="4" rowHeight="50px">
+
+    <mat-grid-tile colspan="1" rowspan="6" *ngFor="let machine of dashboardApiService.MachineStatusArray">
+      <mat-card class="dashboard-card" (click)="gotoDetails(machine.mach_id)">
+
+        <div class="machine-card">
+
+          <div class="side-header">
+            <div class="side-header-text">
+              <span>{{machine.mach_desc}}</span>
+            </div>
+          </div>
+
+          <div class="machine-content">
+            <div class="led-box">
+              <div class="led-green1" *ngIf="machine.mach_status_id == 2"></div>
+              <div class="led-orange1" *ngIf="machine.mach_status_id == 1"></div>
+              <div class="led-red1" *ngIf="machine.mach_status_id == 0"></div>
+            </div>
+
+            <div class="motor-img">
+              <img [src]="machine.mach_img" height="180" align="middle" class="img-motor">
+            </div>
+
+          </div>
+
+        </div>
+
+      </mat-card>
+    </mat-grid-tile>
+
+  </mat-grid-list>
+</div>

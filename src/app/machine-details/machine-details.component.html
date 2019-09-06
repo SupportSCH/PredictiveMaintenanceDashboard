@@ -1,0 +1,254 @@
+<div class="container-fluid">
+
+  <mat-grid-list cols="4" rowHeight="50px">
+
+    <mat-grid-tile colspan="1" rowspan="6">
+      <mat-card class="dashboard-card">
+        <mat-card-header>
+          <mat-card-title>
+            Motor 1
+          </mat-card-title>
+        </mat-card-header>
+
+        <mat-card-content>
+          <div class="card-content">
+
+            <div class="led-box">
+                <div class="led-green1" *ngIf="machineApiService.Machine_Status_Array.mach_status_id == 2"></div>
+              <div class="led-orange1" *ngIf="machineApiService.Machine_Status_Array.mach_status_id == 1"></div>
+              <div class="led-red1" *ngIf="machineApiService.Machine_Status_Array.mach_status_id == 0"></div>
+            </div>
+            
+            <div class="motor-img">
+              <img [src]="machineApiService.Machine_Status_Array.mach_img" height="180" align="middle" class="img-motor">
+            </div>
+          </div>
+
+        </mat-card-content>
+
+      </mat-card>
+    </mat-grid-tile>
+
+    <mat-grid-tile colspan="3" rowspan="6">
+      <mat-card class="dashboard-card">
+        <mat-card-header>
+          <mat-card-title>
+            Time Series Vibration Signal
+          </mat-card-title>
+        </mat-card-header>
+
+        <mat-card-content>
+          <div id="TimeSeriesVibrationSignalChartID" [style.width.%]="100" [style.height.px]="220"></div>
+        </mat-card-content>
+
+      </mat-card>
+    </mat-grid-tile>
+
+  </mat-grid-list>
+
+  <mat-grid-list cols="4" rowHeight="50px">
+
+    <mat-grid-tile colspan="1" rowspan="6">
+      <mat-card class="dashboard-card">
+        <mat-card-header>
+          <mat-card-title>
+            Volts
+          </mat-card-title>
+        </mat-card-header>
+
+        <mat-card-content>
+          <div class="content-text">
+            <p>{{machineApiService.Machine_Signals_Array.volts}}</p>
+          </div>
+        </mat-card-content>
+
+      </mat-card>
+    </mat-grid-tile>
+
+    <mat-grid-tile colspan="1" rowspan="6">
+      <mat-card class="dashboard-card">
+        <mat-card-header>
+          <mat-card-title>
+            Signals
+          </mat-card-title>
+        </mat-card-header>
+
+        <mat-card-content>
+          <div class="content-text">
+            <p>{{machineApiService.Machine_Signals_Array.signal_energy}}</p>
+          </div>
+        </mat-card-content>
+
+      </mat-card>
+    </mat-grid-tile>
+
+    <mat-grid-tile colspan="2" rowspan="6">
+      <mat-card class="dashboard-card">
+        <mat-card-header>
+          <mat-card-title>
+            Machine Learning RUL Estimation
+          </mat-card-title>
+        </mat-card-header>
+
+        <mat-card-content>
+          <div id="MachineLearningRULEstimationChartID" [style.width.%]="100" [style.height.px]="220"></div>
+        </mat-card-content>
+
+      </mat-card>
+    </mat-grid-tile>
+
+    <mat-grid-tile colspan="1" rowspan="6">
+      <mat-card class="dashboard-card">
+        <mat-card-header>
+          <mat-card-title>
+            Fault Type
+          </mat-card-title>
+        </mat-card-header>
+
+        <mat-card-content>
+
+          <div class="fault-type">
+            <div class="fault-type-header-text">
+              <p>Electrical</p>
+            </div>
+
+            <div class="fault-type-answer-text">
+              <p>Unbalanced Supply Voltage</p>
+            </div>
+          </div>
+
+        </mat-card-content>
+
+      </mat-card>
+    </mat-grid-tile>
+
+    <mat-grid-tile colspan="1" rowspan="6">
+      <mat-card class="dashboard-card">
+        <mat-card-header>
+          <mat-card-title>
+            RUL
+          </mat-card-title>
+        </mat-card-header>
+
+        <mat-card-content>
+          <div class="content-text">
+            <p>4000 mins</p>
+          </div>
+        </mat-card-content>
+
+      </mat-card>
+    </mat-grid-tile>
+
+
+    <mat-grid-tile colspan="1" rowspan="6">
+      <mat-card class="dashboard-card">
+        <mat-card-header>
+          <mat-card-title>
+            Supervisor
+          </mat-card-title>
+        </mat-card-header>
+
+        <mat-card-content>
+          <div class="content-text">
+            <p>Mr. Ashok</p>
+          </div>
+        </mat-card-content>
+
+      </mat-card>
+    </mat-grid-tile>
+
+    <mat-grid-tile colspan="1" rowspan="6">
+      <mat-card class="dashboard-card">
+        <mat-card-header>
+          <mat-card-title>
+            SAP Work Order
+          </mat-card-title>
+        </mat-card-header>
+
+        <mat-card-content>
+          <div class="sapwo">
+            <div>
+              <div class="sapwo-answer-text">
+                <p>542768935</p>
+              </div>
+
+              <div class="sapwo-header-text">
+                <p>ID</p>
+              </div>
+            </div>
+
+            <div>
+              <div class="sapwo-answer-text">
+                <p>12-12-2018</p>
+              </div>
+
+              <div class="sapwo-header-text">
+                <p>Start Date</p>
+              </div>
+
+            </div>
+
+            <div>
+
+              <div class="sapwo-answer-text">
+                <p>12-12-2018</p>
+              </div>
+
+              <div class="sapwo-header-text">
+                <p>End Date</p>
+              </div>
+
+            </div>
+          </div>
+
+          <div class="tower-lamp">
+            <div class="green-circle">
+            </div>
+
+            <div class="yellow-circle">
+            </div>
+
+            <div class="red-circle">
+            </div>
+
+          </div>
+
+        </mat-card-content>
+
+      </mat-card>
+    </mat-grid-tile>
+
+    <mat-grid-tile colspan="4" rowspan="6">
+      <mat-card class="dashboard-card">
+        <mat-card-header>
+          <mat-card-title>
+            Frequency Analysis
+          </mat-card-title>
+        </mat-card-header>
+
+        <mat-card-content>
+          <div id="FrequencyAnalysisChartID" [style.width.%]="100" [style.height.px]="220"></div>
+        </mat-card-content>
+
+      </mat-card>
+    </mat-grid-tile>
+
+    <mat-grid-tile colspan="4" rowspan="6">
+      <mat-card class="dashboard-card">
+        <mat-card-header>
+          <mat-card-title>
+            Conditioning Monitoring
+          </mat-card-title>
+        </mat-card-header>
+
+        <mat-card-content>
+          <div id="ConditioningMonitoringChartID" [style.width.%]="100" [style.height.px]="220"></div>
+        </mat-card-content>
+
+      </mat-card>
+    </mat-grid-tile>
+
+  </mat-grid-list>
+
+
+</div>

@@ -1,0 +1,74 @@
+<mat-sidenav-container class="sidenav-container">
+  <mat-sidenav #drawer class="sidenav" fixedInViewport="true"
+    [attr.role]="(isHandset$ | async) ? 'dialog' : 'navigation'" [mode]="'over'" [opened]="(isHandset$ | async)">
+
+    <!-- <mat-toolbar color="primary">Menu</mat-toolbar> -->
+
+    <mat-toolbar class="side-bar-profile">
+      <div class="user-profile">
+        <mat-icon class="user-icon">portrait</mat-icon>
+        <div class="user-detail">
+          <div class="user-name">User</div>
+          <div class="user-email">user@pmdashb.com</div>
+        </div>
+      </div>
+
+      <div class="user-role">USER</div>
+
+    </mat-toolbar>
+
+    <app-side-menu></app-side-menu>
+
+  </mat-sidenav>
+
+  <mat-sidenav-content>
+    <mat-toolbar class="nav-bar-shadow">
+      <button type="button" aria-label="Toggle sidenav" mat-icon-button (click)="drawer.toggle()">
+        <mat-icon aria-label="Side nav toggle icon">menu</mat-icon>
+      </button>
+      <!-- <span class="nav-app-name">Predictive Maintanance</span> -->
+
+      <!-- <img src="assets/AA.png" height="55" class="pointer-change"> -->
+
+      <div class="nav-text">
+        <p class="nav-text-header">Company</p>
+        <p class="nav-text-content">EIM Solutions</p>
+      </div>
+
+      <p class="nav-text-divider">|</p>
+
+      <div class="nav-text">
+        <p class="nav-text-header">Plant</p>
+        <p class="nav-text-content">SCH</p>
+      </div>
+
+      <p class="nav-text-divider">|</p>
+
+      <div class="nav-text">
+        <p class="nav-text-header">Work Center</p>
+        <p class="nav-text-content">Novel Office</p>
+      </div>
+
+      <div class="app-name-txt">
+        <h1>Predictive Maintanance</h1>
+      </div>
+      
+
+      <div class="sch-logo">
+
+          <!-- <button mat-icon-button >
+            <mat-icon class="refresh-icon">refresh</mat-icon>
+          </button> -->
+
+        <img src="assets/SCH_Full_White.png" height="35" class="pointer-change">
+      </div>
+
+    </mat-toolbar>
+
+    <div class="container">
+      <router-outlet></router-outlet>
+    </div>
+
+  </mat-sidenav-content>
+
+</mat-sidenav-container>

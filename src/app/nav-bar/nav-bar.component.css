@@ -1,0 +1,141 @@
+.sidenav-container {
+    height: 100%;
+}
+
+.sidenav {
+    width: 250px;
+    border: 0;
+}
+
+.nav-bar-shadow {
+    box-shadow: 0px 0px 16px 3px #a7afbf;
+}
+
+.mat-sidenav-content {
+    overflow-x: hidden;
+}
+
+.mat-toolbar {
+    position: fixed;
+    background-color: #313c51;
+    color: white;
+    z-index: 1;
+}
+
+.container {
+    margin-top: 64px;
+}
+
+.sidenav .mat-toolbar {
+    position: relative;
+    height: 111px;
+    flex-direction: column;
+    align-items: baseline;
+    padding-top: 20px;
+    width: 250px;
+}
+
+.user-name {
+    font-size: 1.1rem;
+    color: white;
+    margin-bottom: -12px;
+}
+
+.user-role {
+    font-size: 0.9rem;
+    color: cornflowerblue;
+    margin-left: 58px;
+}
+
+.user-email {
+    font-size: 0.8rem;
+    color: grey;
+}
+
+.user-profile {
+    display: inline-flex
+}
+
+.user-detail {
+    margin-left: 11px;
+}
+
+.user-icon {
+    font-size: 46px;
+    height: 46px;
+    width: 46px;
+}
+
+.mat-drawer {
+    box-shadow: 0 73px 12px 6px rgba(132, 133, 134, 0.29);
+}
+
+.pointer-change {
+    cursor: pointer;
+}
+
+.nav-text {
+    color: white;
+    margin-left: 1%;
+    margin-right: 1%;
+    font-family: 'Nunito Sans', sans-serif;
+}
+
+.nav-text-header {
+    margin-top: 19px;
+    margin-bottom: 20px;
+    font-size: 12px;
+    color: #85c5e3;
+    font-weight: bold;
+}
+
+.nav-text-content {
+    margin-top: -33px;
+    font-size: 15px;
+    color: #d2e5ee;
+    font-weight: bold;
+}
+
+.nav-text-divider {
+    font-weight: bold;
+    color: #c7a923;
+    font-size: 16px;
+}
+
+.sch-logo {
+    position: absolute;
+    right: 10px;
+    /* bottom: 2px; */
+}
+
+.refresh-icon {
+    margin-top: -12px;
+    margin-right: 14px;
+    font-size: 32px;
+    height: 32px;
+    width: 32px;
+}
+
+.refresh {
+    position: absolute;
+    right: 202px;
+    top: 13px;
+}
+
+.mat-raised-button {
+    line-height: 25px !important;
+}
+
+.nav-app-name {
+    color: #c5b560;
+}
+
+.app-name-txt {
+    width: 60%;
+    text-align: center;
+}
+
+.app-name-txt h1{
+    font-size: 33px;
+    font-weight: bold;
+}
